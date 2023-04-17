@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer myComponent {
+	.country {
+		@apply !drop-shadow cursor-pointer;
+	}
+	.country img {
+		@apply !w-full md:!h-48;
+	}
+
+	.country > div {
+		@apply p-5 bg-White dark:bg-DarkBlue;
+	}
+	.country > div h3 {
+		@apply !my-3 !font-bold !text-lg;
+	}
+	.country > div > div {
+		@apply font-bold;
+	}
+	.country > div > div > span {
+		@apply font-normal;
+	}
+
+	.border-country {
+		@apply !drop-shadow bg-White dark:bg-DarkBlue text-center w-fit px-4 py-1.5 cursor-pointer select-none;
+	}
+
+
+}

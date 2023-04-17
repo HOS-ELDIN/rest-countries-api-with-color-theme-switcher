@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body
+		class="font-nunito text-detailPage bg-VeryLightGray dark:bg-DarkBlueBg dark:text-White"
+	>
+		<header class="bg-White dark:bg-DarkBlue shadow">
+			<div class="container mx-auto flex justify-between p-5">
+				<h1 class="font-bold">Where in the world?</h1>
+				<div class="dark-sw cursor-pointer select-none">
+					<i class="fa-regular dark:hidden fa-moon"></i>
+					<i class="!hidden dark:!inline fa-solid fa-moon"></i>
+					<span>Dark Mode</span>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="single hidden container mx-auto p-5 mt-6">
+				<button
+					class="back flex items-center gap-2 bg-White dark:bg-DarkBlue drop-shadow px-5 py-0.5"
+				>
+					<i class="fa-solid fa-arrow-left-long"></i>
+					back
+				</button>
+				<div class="mt-6 lg:flex gap-24">
+					<img class="large-flag w-full mb-auto max-h-[450px]" src="" alt="" />
+					<div class="w-full">
+						<h2 class="country-name text-2xl font-bold my-5"></h2>
+						<div class="lg:flex lg:justify-between">
+							<ul class="flex flex-col gap-2 lg:w-1/2">
+								<li class="font-semibold">
+									Native Name: <span class="native-name font-normal"></span>
+								</li>
+								<li class="font-semibold">
+									Population:
+									<span class="population-detailed font-normal"></span>
+								</li>
+								<li class="font-semibold">
+									Region: <span class="region-detailed font-normal"></span>
+								</li>
+								<li class="font-semibold">
+									Sub Region: <span class="sub-region font-normal"></span>
+								</li>
+								<li class="font-semibold">
+									Capital: <span class="Capital-detailed font-normal"></span>
+								</li>
+							</ul>
+							<ul class="flex flex-col gap-2 mt-10 lg:mt-0 lg:w-1/2">
+								<li class="font-semibold">
+									Top Level Domain: <span class="top-domain font-normal"></span>
+								</li>
+								<li class="font-semibold">
+									Currencies: <span class="currencies font-normal"></span>
+								</li>
+								<li class="font-semibold">
+									Languages: <span class="language font-normal"></span>
+								</li>
+							</ul>
+						</div>
+						<div class="lg:flex items-start mt-10 gap-5 lg:gap-2">
+							<span class="block lg:block font-semibold w-32 shrink-0 py-1.5"
+								>Border Countries:</span
+							>
+							<div
+								class="borders-container flex gap-3 flex-wrap justify-center lg:justify-normal"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main container mx-auto p-5">
+				<div
+					class="flex flex-col sm:flex-row justify-between gap-10 items-start"
+				>
+					<label class="relative w-full sm:w-auto" for="search">
+						<i
+							class="absolute left-4 sm:left-3 bottom-1/2 translate-y-1/2 fa-solid fa-magnifying-glass"
+						></i>
+						<input
+							class="bg-white dark:bg-DarkBlue px-12 py-2 w-full sm:w-80 mx-auto block shadow rounded-sm"
+							type="search"
+							name=""
+							id="search"
+							placeholder="Search for country..."
+						/>
+					</label>
+
+					<div class="relative capitalize w-1/2 sm:w-auto">
+						<div
+							class="region-select py-2 px-4 shadow rounded-md capitalize bg-White dark:bg-DarkBlue flex items-center gap-2 mb-1 cursor-pointer select-none"
+						>
+							<p class="">filter by Region</p>
+							<i class="fa-solid fa-angle-down"></i>
+						</div>
+						<ul
+							class="region absolute left-0 right-0 hidden p-4 shadow rounded-md capitalize bg-White dark:bg-DarkBlue z-20"
+						>
+							<li
+								class="px-4 py-1 cursor-pointer select-none hover:border rounded-full"
+							>
+								africa
+							</li>
+							<li
+								class="px-4 py-1 cursor-pointer select-none hover:border rounded-full"
+							>
+								americas
+							</li>
+							<li
+								class="px-4 py-1 cursor-pointer select-none hover:border rounded-full"
+							>
+								asia
+							</li>
+							<li
+								class="px-4 py-1 cursor-pointer select-none hover:border rounded-full"
+							>
+								europe
+							</li>
+							<li
+								class="px-4 py-1 cursor-pointer select-none hover:border rounded-full"
+							>
+								oceania
+							</li>
+							<li
+								class="px-4 py-1 cursor-pointer select-none hover:border rounded-full"
+							>
+								All
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div
+					class="countries-container grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-10"
+				></div>
+			</div>
+		</main>
+		<script
+			src="https://kit.fontawesome.com/c4e7ee9922.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="main.js"></script>
+	</body>
+</html>
